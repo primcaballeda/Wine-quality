@@ -1,11 +1,23 @@
 import streamlit as st
 import joblib
 import numpy as np
+import xgboost
 
 # Load the trained model
 model = joblib.load("wine_model.pkl")
 
 st.set_page_config(page_title="Wine Quality Detector")
+
+# Add pink background styling
+st.markdown("""
+<style>
+.stApp {
+    background-color: #EAC4D5;
+    color: #19535F ;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Wine Quality Detector")
 st.write("Enter the chemical attributes of a red wine sample:")
 
