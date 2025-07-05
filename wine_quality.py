@@ -8,7 +8,7 @@ model = joblib.load("wine_model.pkl")
 
 st.set_page_config(page_title="Wine Quality Detector")
 
-# Add pink background styling
+# Add styling (optional)
 st.markdown("""
 <style>
 .stApp {
@@ -21,7 +21,7 @@ st.markdown("""
 st.title("Wine Quality Detector")
 st.write("Enter the chemical attributes of a red wine sample:")
 
-# Input fields
+# Input fields to predict wine quality
 fixed_acidity = st.number_input("Fixed Acidity", 4.0, 16.0, step=0.1, value=7.9)
 volatile_acidity = st.number_input("Volatile Acidity", 0.1, 1.6, step=0.01, value=0.32)
 citric_acid = st.number_input("Citric Acid", 0.0, 1.0, step=0.01, value=0.51)
